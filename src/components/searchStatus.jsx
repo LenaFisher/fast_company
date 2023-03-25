@@ -1,6 +1,5 @@
 import React from "react";
 
-
 const SearchStatus = (users) => {
     // console.log(users)
 
@@ -14,10 +13,20 @@ const SearchStatus = (users) => {
 
     return (
         <>
-            <span className={users.length > 0 ? "badge bg-primary" : "badge bg-danger"}>{users.length > 0 ? users.length + " " + renderPhrase(users.length) + " с тобой сегодня" : "Никто с тобой не тусанет"}
+            <span
+                className={
+                    users.length > 0 ? "badge bg-primary" : "badge bg-danger"
+                }
+            >
+                {users.length > 0
+                    ? users.length +
+                      " " +
+                      renderPhrase(users.length) +
+                      " с тобой сегодня"
+                    : "Никто с тобой не тусанет"}
             </span>
         </>
-    )
-}
+    );
+};
 
 export default SearchStatus;
