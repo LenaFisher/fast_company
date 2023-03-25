@@ -13,7 +13,7 @@ const qualities = {
         color: "primary"
     },
     strange: {
-        _id:"67rdca3eeb7f6fgeed471100",
+        _id: "67rdca3eeb7f6fgeed471100",
         name: "Странный",
         color: "secondary"
     },
