@@ -13,7 +13,13 @@ module.exports = {
     rules: {
         indent: ["error", 4], // Отступ количество пробелов
         semi: [2, "always"], // Точка с запятой в конце строки
-        "space-before-function-paren": ["error", "never"], // Ошибка при наличии пробела при обозночении функции, уберём её
+        "space-before-function-paren": [
+            "error",
+            {
+                anonymous: "always",
+                named: "never"
+            }
+        ], // Ошибка при наличии пробела при обозночении функции, уберём её
         quotes: ["error", "double", { allowTemplateLiterals: true }] // Использование двойных кавычек
     }
 };

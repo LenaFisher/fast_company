@@ -55,12 +55,17 @@ const User = ({
 User.propTypes = {
     _id: PropTypes.string.isRequired,
     name: PropTypes.string.isRequired,
-    profession: PropTypes.string.isRequired,
-    qualities: PropTypes.shape(PropTypes.shape({
+    profession: PropTypes.shape({
         _id: PropTypes.string.isRequired,
-        name: PropTypes.string.isRequired,
-        color: PropTypes.string.isRequired
-    })),
+        name: PropTypes.string.isRequired
+    }).isRequired,
+    qualities: PropTypes.arrayOf(
+        PropTypes.shape({
+            _id: PropTypes.string.isRequired,
+            name: PropTypes.string.isRequired,
+            color: PropTypes.string.isRequired
+        })
+    ),
     completedMeetings: PropTypes.number.isRequired,
     rate: PropTypes.number.isRequired,
     bookmark: PropTypes.bool.isRequired,

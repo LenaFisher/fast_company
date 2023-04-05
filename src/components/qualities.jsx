@@ -2,6 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 
 const Qualities = (user) => {
+    // console.log(user);
     return (
         <>
             {user.qualities.map((q) => (
@@ -14,11 +15,13 @@ const Qualities = (user) => {
 };
 
 Qualities.proptype = {
-    qualities: PropTypes.shape({
-        _id: PropTypes.string.isRequired,
-        name: PropTypes.string.isRequired,
-        color: PropTypes.string.isRequired
-    })
+    qualities: PropTypes.arrayOf(
+        PropTypes.shape({
+            _id: PropTypes.string.isRequired,
+            name: PropTypes.string.isRequired,
+            color: PropTypes.string.isRequired
+        })
+    )
 };
 
 export default Qualities;

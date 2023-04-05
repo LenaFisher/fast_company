@@ -13,7 +13,7 @@ const SearchStatus = (users) => {
 
     return (
         <>
-            <span
+            <h1
                 className={
                     users.length > 0 ? "badge bg-primary" : "badge bg-danger"
                 }
@@ -24,7 +24,7 @@ const SearchStatus = (users) => {
                       renderPhrase(users.length) +
                       " с тобой сегодня"
                     : "Никто с тобой не тусанет"}
-            </span>
+            </h1>
         </>
     );
 };
